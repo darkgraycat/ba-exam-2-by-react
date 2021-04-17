@@ -1,7 +1,9 @@
-h1 {
-  color: white;
-  font-family: monospace;
-  text-align: center;
-  border: 2px solid black;
-  background-color: black;
+@import 'fonts.scss';
+@import 'mixins.scss';
+@import 'Header.scss';
+
+html, body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
