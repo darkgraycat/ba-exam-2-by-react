@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from './Logo.jsx'
+import Logo from './components/Logo.jsx'
 
 const Header = () => {
   return (
