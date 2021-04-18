@@ -35,6 +35,7 @@ const Header = () => {
       </ContentRow>
       <ContentRow>
         <Button isRounded={true} onClick={handleScrollDown} icon="fas fa-angle-down" />
+        <Button>READ MORE</Button>
       </ContentRow>
     </div>
   )
