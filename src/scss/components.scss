@@ -4,8 +4,9 @@
 }
 
 .Navbar {
-  @include flex(row, space-between, flex-start, nowrap);
+  @include flex(row, space-around, flex-start, nowrap, 60px);
   @include mq1 {display: none;}
+  padding: 0px;
   list-style: none;
 
   a {
@@ -13,32 +14,18 @@
     @include font($font-light, 1.4rem, $color-light);
     text-transform: uppercase;
     text-decoration: none;
-    margin-right: 30px;
     white-space: nowrap;
   }
 }
 
 .Socials {
   @include flex(row, center, center, nowrap, 20px);
-  a {
-    @include flex(row, center, center);
-    @include mq1 {width: 30px; height: 30px; border: 0;}
-    width: 40px;
-    height: 40px;
-    border: 1px solid $color-light;
-    border-radius: 50%;
-    font-size: 1.6rem;
-    color: $color-light;
-    text-decoration: none;
-    &:hover {
-      background-color: $color-hover;
-    }
-  }
 }
 
 .ContentRow {
   margin: 0 auto;
-  max-width: 1070px;
+  max-width: 1170px;
+  width: 100%;
   padding: 50px 0;
   @include flex(row, space-between, center);
   @include mq1 {@include flex(column, flex-start, center)}
@@ -72,4 +59,8 @@
     background-color: $color-light;
     color: $color-blue;
   }
+}
+
+.PageTitle {
+
 }
