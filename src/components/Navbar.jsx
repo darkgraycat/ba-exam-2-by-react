@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Navbar = ({ navNames, navLinks }) => {
+const Navbar = ({ names, links }) => {
   return (
     <ul className="Navbar">
-      {navNames.map((name, key) => <li key={key}><a href={navLinks[key]}>{name}</a></li>)}
+      {names.map((name, key) => <li key={key}><a href={links[key]}>{name}</a></li>)}
     </ul>
   )
 }

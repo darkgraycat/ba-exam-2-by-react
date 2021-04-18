@@ -18,8 +18,8 @@ const Header = () => {
       <ContentRow>
         <Logo />
         <Navbar
-          navNames={['About us', 'Projects', 'News', 'Contact']}
-          navLinks={['#about', '#projects', '#news', '#contact']}
+          names={['About us', 'Projects', 'News', 'Contact']}
+          links={['#about', '#projects', '#news', '#contact']}
         />
         <Socials>
           <Button isRounded={true} onClick={handleLink('facebook')} icon="fab fa-facebook-f" />
