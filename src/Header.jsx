@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from './components/Logo.jsx'
 import Navbar from './components/Navbar.jsx'
-import Button from './components/Button.jsx';
+import Button from './components/Button.jsx'
 import Socials from './components/Socials.jsx'
 import ContentRow from './components/ContentRow.jsx'
 
