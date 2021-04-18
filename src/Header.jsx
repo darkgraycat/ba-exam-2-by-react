@@ -5,11 +5,13 @@ import Button from './components/Button.jsx';
 import Socials from './components/Socials.jsx'
 import ContentRow from './components/ContentRow.jsx'
 
+// TODO: provide Navbar with own private button component
+
 const Header = () => {
 
-  const handleScrollDown = () => {
-    console.log('scroll down');
-  }
+  const handleScrollDown = e => console.log('scroll down', e)
+
+  const handleLink = target => e => console.log('link is', target, e)
 
   return (
     <div className="Header">
@@ -22,16 +24,18 @@ const Header = () => {
           <a href="#">Contact</a>
         </Navbar>
         <Socials>
-          <a href="#"><i className="fab fa-facebook-f"></i></a>
-          <a href="#"><i className="fab fa-twitter"></i></a>
-          <a href="#"><i className="fab fa-instagram"></i></a>
+          <Button isRounded={true} onClick={handleLink('facebook')} icon="fab fa-facebook-f" />
+          <Button isRounded={true} onClick={handleLink('twitter')} icon="fab fa-twitter" />
+          <Button isRounded={true} onClick={handleLink('instagram')} icon="fab fa-instagram" />
         </Socials>
       </ContentRow>
       <ContentRow style={{ flexDirection: "column", padding: "0" }}>
         <h1>Simple & Modern</h1>
         <h2>We make the world beautiful every day</h2>
       </ContentRow>
-      <Button isRounded={true} onClick={handleScrollDown} icon="fas fa-angle-down" />
+      <ContentRow>
+        <Button isRounded={true} onClick={handleScrollDown} icon="fas fa-angle-down" />
+      </ContentRow>
     </div>
   )
 }
