@@ -8,11 +8,8 @@
   @include mq1 {display: none;}
   list-style: none;
 
-  li {
-    @include nav-dot(1rem);
-    white-space: nowrap;
-  }
   a {
+    @include nav-dot(1rem);
     @include font($font-light, 1.4rem, $color-light);
     text-transform: uppercase;
     text-decoration: none;
