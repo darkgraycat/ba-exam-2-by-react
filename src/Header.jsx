@@ -1,10 +1,16 @@
 import React from 'react'
 import Logo from './components/Logo.jsx'
 import Navbar from './components/Navbar.jsx'
+import Button from './components/Button.jsx';
 import Socials from './components/Socials.jsx'
 import ContentRow from './components/ContentRow.jsx'
 
 const Header = () => {
+
+  const handleScrollDown = () => {
+    console.log('scroll down');
+  }
+
   return (
     <div className="Header">
       <ContentRow>
@@ -25,9 +31,7 @@ const Header = () => {
         <h1>Simple & Modern</h1>
         <h2>We make the world beautiful every day</h2>
       </ContentRow>
-      <button>
-        <i className="fas fa-angle-down"></i>
-      </button>
+      <Button isRounded={true} onClick={handleScrollDown} icon="fas fa-angle-down" />
     </div>
   )
 }

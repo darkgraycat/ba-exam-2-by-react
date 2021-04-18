@@ -21,30 +21,4 @@
     text-transform: uppercase;
     margin: 10px;
   }
-
-  // need to create Button component
-  // so we can use it in slider, scroll-down, socials
-  // and it will be good if it can be square or round
-  // we can use if statement with different stylesets
-  // like:
-  // <Button type="round">
-  //   <i className="...."></i>
-  // </Button>
-  // or add icons by param
-  // <Button icon="fas fa-angle-down">
-
-  button {
-    width: 40px;
-    height: 40px;
-    border: 1px solid $color-light;
-    border-radius: 50%;
-    font-size: 1.6rem;
-    color: $color-light;
-    text-decoration: none;
-    background: transparent;
-    margin: 40px;
-    &:hover {
-      background-color: $color-hover;
-    }
-  }
 }
