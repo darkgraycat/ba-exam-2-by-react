@@ -17,12 +17,10 @@ const Header = () => {
     <div className="Header">
       <ContentRow>
         <Logo />
-        <Navbar>
-          <a href="#">About us</a>
-          <a href="#">Projects</a>
-          <a href="#">News</a>
-          <a href="#">Contact</a>
-        </Navbar>
+        <Navbar
+          navNames={['About us', 'Projects', 'News', 'Contact']}
+          navLinks={['#about', '#projects', '#news', '#contact']}
+        />
         <Socials>
           <Button isRounded={true} onClick={handleLink('facebook')} icon="fab fa-facebook-f" />
           <Button isRounded={true} onClick={handleLink('twitter')} icon="fab fa-twitter" />
