@@ -5,8 +5,6 @@ import Button from './components/Button.jsx';
 import Socials from './components/Socials.jsx'
 import ContentRow from './components/ContentRow.jsx'
 
-// TODO: provide Navbar with own private button component
-
 const Header = () => {
 
   const handleScrollDown = e => console.log('scroll down', e)
@@ -33,7 +31,6 @@ const Header = () => {
       </ContentRow>
       <ContentRow>
         <Button isRounded={true} onClick={handleScrollDown} icon="fas fa-angle-down" />
-        <Button>READ MORE</Button>
       </ContentRow>
     </div>
   )
