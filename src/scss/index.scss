@@ -1,9 +1,21 @@
-@import 'fonts.scss';
+@import 'variables.scss';
 @import 'mixins.scss';
+@import 'fonts.scss';
+
+@import 'components.scss';
+
 @import 'Header.scss';
+
 
 html, body {
   width: 100%;
   padding: 0;
   margin: 0;
+
+  // use 10px font-size to easy 
+  // calculations and scaling
+  // ex: 14px is 1.4rem
+  // at 768px 1.4 = 11.2px
+  font-size: 10px;
+  @include mq1 {font-size: 6px;}
 }

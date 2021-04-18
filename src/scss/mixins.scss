@@ -6,3 +6,43 @@
   flex-wrap: $wrap;
   gap: $gap;
 }
+
+@mixin img-block($img, $width, $height, $size:cover, $position:center) {
+  background-image: url('../img/#{$img}');
+  background-position: $position;
+  background-size: $size;
+  background-repeat: no-repeat;
+  width: $width;
+  height: $height;
+}
+
+@mixin font($family, $size, $color:#000, $line-height: normal) {
+  font-family: $family;
+  font-size: $size;
+  color: $color;
+  line-height: $line-height;
+}
+
+@mixin nav-dot($size: 10px) {
+  &:hover::before {
+    transition: all 0.5s ease;
+    background-color: $color-light;
+  }
+
+  &::before {
+    transition: all 0.5s ease;
+    content: '';
+    display: inline-block;
+    margin-right: $size;
+    width: $size;
+    height: $size;
+    border: 1px solid $color-light;
+    border-radius: 50%;
+  }
+}
+
+@mixin mq1 {
+  @media (max-width: 900px) {
+    @content;
+  }
+}

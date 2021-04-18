@@ -1,0 +1,48 @@
+.Logo {
+  @include img-block('Logo.svg', 240px, 50px, contain);
+  @include mq1 {width: 120px; height: 25px;}
+}
+
+.Navbar {
+  @include flex(row, space-between, flex-start, nowrap);
+  @include mq1 {display: none;}
+  list-style: none;
+
+  li {
+    @include nav-dot(1rem);
+    white-space: nowrap;
+  }
+  a {
+    @include font($font-light, 1.4rem, $color-light);
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 30px;
+    white-space: nowrap;
+  }
+}
+
+.Socials {
+  @include flex(row, center, center, nowrap, 20px);
+  a {
+    @include flex(row, center, center);
+    @include mq1 {width: 30px; height: 30px; border: 0;}
+    width: 40px;
+    height: 40px;
+    border: 1px solid $color-light;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    color: $color-light;
+    text-decoration: none;
+    &:hover {
+      background-color: $color-hover;
+    }
+  }
+}
+
+.ContentRow {
+  margin: 0 auto;
+  max-width: 1070px;
+  padding: 50px 0;
+  @include flex(row, space-between, center);
+  @include mq1 {@include flex(column, flex-start, center)}
+}
