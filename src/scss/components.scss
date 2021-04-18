@@ -46,6 +46,7 @@
 
 .Button {
   @include flex(column, center, center);
+  @include mq1 {border: 0}
   cursor: pointer;
   width: fit-content;
   color: $color-dark;
@@ -61,7 +62,8 @@
     height: 40px;
     color: $color-light;
     border-radius: 50%;
-    border: 1px solid $color-light;
+    border-width: 1px;
+    border-color: $color-light;
   }
   &:hover {
     background-color: $color-hover;
